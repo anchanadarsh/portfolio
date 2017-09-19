@@ -37,23 +37,42 @@ body {
       height: 100%;
       width: 100%;
       text-align: center;
-      background: rgba(51, 51, 51, 0.6);
+      background: rgba(51, 51, 51, 0.2);
       transition: all 0.3s ease; }
       #mywork .project-thumb .project-overlay i {
         color: white;
-        margin-top: 58px;
-        font-size: 2.5em; }
+        margin-top: -15px;
+        opacity: 0;
+        font-size: 2.5em;
+        transition: all 0.8s; }
     #mywork .project-thumb:hover {
       box-shadow: 5px 5px 8px 0px rgba(51, 51, 51, 0.5); }
     #mywork .project-thumb:hover .project-overlay {
       display: block; }
+      #mywork .project-thumb:hover .project-overlay i {
+        margin-top: 58px;
+        opacity: 1; }
 
 .project-modal .modal .modal-content {
-  border: none; }
+  border: none;
+  overflow: hidden; }
   .project-modal .modal .modal-content .modal-body {
     height: calc(100vh - 183px);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 0; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar {
+      width: 2px;
+      background-color: #18ffff; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-thumb {
+      background-color: #18ffff; }
+  .project-modal .modal .modal-content .modal-footer {
+    padding: 0;
+    border: 0;
+    margin: 0; }
 
 .modal-backdrop {
   background-color: transparent; }

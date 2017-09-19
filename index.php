@@ -53,7 +53,16 @@
                         <img class="img-responsive" src="img/projects/{{project}}.jpg">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
+                                    <p class="m-none">Website</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
+                                    <p class="m-none">Close</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -71,8 +80,13 @@
         });
     </script>
     <script>
-        $(".zoom-modal").click(function () {
-            $(".makeblur").css("filter", "blur(25px)");
+        $(document).ready(function () {
+            $(".zoom-modal").click(function () {
+                $(".makeblur").css("filter", "blur(25px)");
+            });
+            $(".project-modal .modal").click(function(){
+                $(".makeblur").css("filter", "blur(0px)");
+            });
         });
     </script>
     <!-- Latest compiled and minified JavaScript -->

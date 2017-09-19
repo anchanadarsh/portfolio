@@ -1,3 +1,19 @@
+
+.m-none{
+    margin: 0!important;
+}
 .m-b-md{
     margin-bottom: 20px!important;
+}
+
+.p-md{
+    padding: 20px!important;
+}
+
+.p-none{
+    padding: 0!important;
+}
+
+.text-center{
+    text-align: center;
 }

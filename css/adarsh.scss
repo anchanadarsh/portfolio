@@ -1,3 +1,4 @@
+$primary-color:#18ffff;
 body {
     font-family: 'Roboto Mono', monospace;
 }
@@ -42,12 +43,14 @@ body {
             height: 100%;
             width: 100%;
             text-align: center;
-            background: rgba(51, 51, 51, 0.6);
+            background: rgba(51, 51, 51, 0.2);
             transition: all 0.3s ease;
             i {
                 color: white;
-                margin-top: 58px;
+                margin-top: -15px;
+                opacity: 0;
                 font-size: 2.5em;
+                transition: all 0.8s;
             }
         }
         &:hover {
@@ -58,6 +61,10 @@ body {
         }
         &:hover .project-overlay {
             display: block;
+            i {
+                margin-top: 58px;
+                opacity: 1;
+            }
         }
     }
 }
@@ -66,10 +73,28 @@ body {
     .modal {
         .modal-content {
             border: none;
+            overflow: hidden;
             .modal-body {
                 height: calc(100vh - 183px);
-                overflow: scroll;
+                overflow-y: scroll;
+                overflow-x: hidden;
                 padding: 0;
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    background-color: #F5F5F5;
+                }
+                &::-webkit-scrollbar {
+                    width: 2px;
+                    background-color: $primary-color;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $primary-color;;
+                }
+            }
+            .modal-footer{
+                padding: 0;
+                border: 0;
+                margin: 0;
             }
         }
     }
