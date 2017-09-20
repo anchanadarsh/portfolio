@@ -1,30 +1,40 @@
 body {
   font-family: 'Roboto Mono', monospace; }
 
+.section-title {
+  margin: 40px 0px; }
+  .section-title h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4em;
+    text-align: center; }
+    .section-title h2:after {
+      content: attr(sec-title);
+      font-size: 1.3em;
+      color: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+
+#aboutme {
+  height: 100vh;
+  width: 100%;
+  background: white; }
+  #aboutme .about-img img {
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px rgba(51, 51, 51, 0.2); }
+
 #mywork {
   height: 100vh;
   width: 100%;
   background: #efefef; }
-  #mywork .section-title {
-    margin: 40px 0px; }
-    #mywork .section-title h2 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 4em;
-      text-align: center; }
-      #mywork .section-title h2:after {
-        content: attr(sec-title);
-        font-size: 1.3em;
-        color: rgba(0, 0, 0, 0.05);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%; }
   #mywork .project-thumb {
     height: 150px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    border-radius: 5px;
     box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.6);
     transition: all 0.3s; }
     #mywork .project-thumb img {
@@ -43,10 +53,9 @@ body {
         color: white;
         margin-top: -15px;
         opacity: 0;
-        font-size: 2.5em;
-        transition: all 0.8s; }
+        font-size: 2.5em; }
     #mywork .project-thumb:hover {
-      box-shadow: 5px 5px 8px 0px rgba(51, 51, 51, 0.5); }
+      box-shadow: 3px 18px 20px -10px rgba(51, 51, 51, 0.5); }
     #mywork .project-thumb:hover .project-overlay {
       display: block; }
       #mywork .project-thumb:hover .project-overlay i {
@@ -77,4 +86,4 @@ body {
 .modal-backdrop {
   background-color: transparent; }
 
-/*# sourceMappingURL=adarsh.css.map */
+/*# sourceMappingURL=style.css.map */

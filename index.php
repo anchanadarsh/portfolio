@@ -1,21 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/freaking-custom.css" type="text/css">
-    <link rel="stylesheet" href="css/adarsh.css" type="text/css">
+    <title>Adarsh Anchan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <?php include '_partial/head.php' ?>
 </head>
 
 <body ng-app="portfolio" ng-controller="portfolioCtrl">
+    <header>
+        <?php include '_partial/header.php' ?>
+    </header>
+    <div class="clearfix"></div>
     <div class="makeblur">
+        <section id="aboutme">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 sec-title="ABOUT ME">ABOUT ME</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-4 p-none">
+                        <img src="img/adarsh.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="mywork">
             <div class="container">
                 <div class="section-title">
@@ -69,28 +87,31 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://use.fontawesome.com/e49acd8124.js"></script>
 
-    <script>
-        angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
-            $scope.projects = ['supreme', 'labs', 'peacecafee', 'aqsa', 'beyondgreen']
+    <div class="clearfix"></div>
+    <footer>
+        <?php include '_partial/footer.php' ?>
+    </footer>
+    <?php include '_partial/footer-scripts.php' ?>
 
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(".zoom-modal").click(function () {
-                $(".makeblur").css("filter", "blur(25px)");
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <script>
+            angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
+                $scope.projects = ['supreme', 'labs', 'peacecafee', 'aqsa', 'beyondgreen']
+
             });
-            $(".project-modal .modal").click(function(){
-                $(".makeblur").css("filter", "blur(0px)");
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".zoom-modal").click(function () {
+                    $(".makeblur").css("filter", "blur(25px)");
+                });
+                $(".project-modal .modal").click(function () {
+                    $(".makeblur").css("filter", "blur(0px)");
+                });
             });
-        });
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        </script>
 
 
 </body>
