@@ -26,10 +26,23 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-8">
+                        <p>Hello, World! – started from there just like any other developer and now I’m here! Adarsh Anchan, an Engineer turned Website Developer, who now turns coffee into codes.</p>
+                        <p>Here’s a simple approach I live by –
+                            <br> C(reativity) – to drive me as a developer.
+                            <br> O(riginality) – to retain uniqueness.
+                            <br> D(esigning) – to make your ideas visual.
+                            <br> I(nnovation) – to unlock new concepts.
+                            <br> N(ew trends) – to keep up in digital media.
+                            <br> G(usto) – to love what you do.</p>
+                        <p>I love coding, I really do! I have never worked a day in my life since my work is also my hobby. Speaking of which, I can translate designs into working code.</p>
+                        <p>Mastering the art of making ideas happen for various brands to dominate small screens – I try to bridge the gap between a brand and their audiences with my visually appealing and responsive websites.</p>
+                        <p>With an excellent communication and good listening skills, I am able to garner client expectations and put forth it into actions. I always keep an eye out for new, different approaches and techniques. As a developer, I am never afraid of criticism as it helps me grow and forge ahead. </p>
+                        <!--<p>Just like how programming language is not a hard nut to crack for me, neither is solving problems. I like to work with people and not for or apart from them!</p>-->
+                        <p>Being an outgoing and zealous person, I make sure to have a little dose of fun at work – because why not! And if you were to catch me on my day off, I would either be playing cricket or football!</p>
 
                     </div>
-                    <div class="col-xs-12 col-sm-4 p-none">
-                        <img src="img/adarsh.jpg" class="img-responsive">
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="img/1234.jpg" class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -73,10 +86,10 @@
                     <div class="modal-footer">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
+                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
                                     <p class="m-none">Website</p>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
+                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
                                     <p class="m-none">Close</p>
                                 </div>
                             </div>

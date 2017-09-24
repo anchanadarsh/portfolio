@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto Mono', monospace; }
+  font-family: 'Muli', sans-serif; }
 
 .section-title {
   margin: 40px 0px; }
@@ -18,7 +18,7 @@ body {
       width: 100%; }
 
 #aboutme {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: white; }
   #aboutme .about-img img {
@@ -26,7 +26,7 @@ body {
     box-shadow: 5px 5px 15px 5px rgba(51, 51, 51, 0.2); }
 
 #mywork {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #efefef; }
   #mywork .project-thumb {
@@ -40,27 +40,28 @@ body {
     #mywork .project-thumb img {
       transition: all 0.3s ease-in; }
     #mywork .project-thumb .project-overlay {
-      display: none;
+      opacity: 0;
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
       text-align: center;
-      background: rgba(51, 51, 51, 0.2);
+      background: rgba(0, 0, 0, 0.8);
       transition: all 0.3s ease; }
       #mywork .project-thumb .project-overlay i {
         color: white;
         margin-top: -15px;
         opacity: 0;
-        font-size: 2.5em; }
+        font-size: 2.5em;
+        transition: all 0.5s; }
     #mywork .project-thumb:hover {
       box-shadow: 3px 18px 20px -10px rgba(51, 51, 51, 0.5); }
     #mywork .project-thumb:hover .project-overlay {
-      display: block; }
-      #mywork .project-thumb:hover .project-overlay i {
-        margin-top: 58px;
-        opacity: 1; }
+      opacity: 1; }
+    #mywork .project-thumb:hover i {
+      margin-top: 58px;
+      opacity: 1; }
 
 .project-modal .modal .modal-content {
   border: none;
