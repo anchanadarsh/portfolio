@@ -1,4 +1,5 @@
-$primary-color:#18ffff;
+$primary-color:#00acc1;
+//$primary-color:#18ffff;
 body {
     //    font-family: 'Roboto Mono', monospace;
     font-family: 'Muli', sans-serif;
@@ -36,9 +37,27 @@ body {
 }
 
 #mywork {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: #efefef;
+    .light-on-bulb,
+    .light-off-bulb {
+        position: absolute;
+        top: 0;
+        right: 100px;
+    }
+    .light-off-overlay {
+        position: absolute;
+        background: #000000;
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s;
+    }
     .project-thumb {
         height: 150px;
         overflow: hidden;
@@ -108,6 +127,15 @@ body {
                 padding: 0;
                 border: 0;
                 margin: 0;
+                .mod-foot-elem {
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                    }
+                    &:hover {
+                        background: $primary-color;
+                    }
+                }
             }
         }
     }

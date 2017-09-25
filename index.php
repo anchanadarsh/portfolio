@@ -48,6 +48,14 @@
             </div>
         </section>
         <section id="mywork">
+            <div class="light-on-bulb">
+                <img src="img/bulb-on.png" width="100px">
+            </div>
+            <div class="light-off-overlay">
+                <div class="light-off-bulb">
+                    <img src="img/bulb-off.png" width="100px">
+                </div>
+            </div>
             <div class="container">
                 <div class="section-title">
                     <div class="row">
@@ -59,9 +67,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-b-md" ng-repeat="project in projects">
                         <div class="project-thumb">
-                            <img class="img-responsive" src="img/projects/{{project}}.jpg">
+                            <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
                             <div class="project-overlay">
-                                <i class="fa fa-search-plus zoom-modal" aria-hidden="true" data-toggle="modal" data-target="#{{project}}"></i>
+                                <i class="fa fa-search-plus zoom-modal" aria-hidden="true" data-toggle="modal" data-target="#{{project.name}}"></i>
                             </div>
                         </div>
 
@@ -71,23 +79,25 @@
         </section>
     </div>
     <div class="project-modal" ng-repeat="project in projects">
-        <div id="{{project}}" class="modal fade" role="dialog">
+        <div id="{{project.name}}" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
 
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">{{project}}</h4>
+                        <h4 class="modal-title">{{project.name}}</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="img/projects/{{project}}.jpg">
+                        <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
                     </div>
                     <div class="modal-footer">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
-                                    <p class="m-none">Website</p>
+                                    <a href="{{project.url}}" target="_blank">
+                                        <p class="m-none">Website</p>
+                                    </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
                                     <p class="m-none">Close</p>
@@ -111,7 +121,22 @@
 
         <script>
             angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
-                $scope.projects = ['supreme', 'labs', 'peacecafee', 'aqsa', 'beyondgreen']
+                $scope.projects = [{
+                    name: 'supreme',
+                    url: 'http://supremegroupindia.com/'
+                }, {
+                    name: 'labs',
+                    url: 'https://lazyassbikers.com/'
+                }, {
+                    name: 'peacecafee',
+                    url: 'http://peacecafee.com/'
+                }, {
+                    name: 'aqsa',
+                    url: 'http://www.aqsacomp.com/'
+                }, {
+                    name: 'beyondgreen',
+                    url: 'http://beyondgreen.in/'
+                }]
 
             });
         </script>

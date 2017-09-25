@@ -26,9 +26,25 @@ body {
     box-shadow: 5px 5px 15px 5px rgba(51, 51, 51, 0.2); }
 
 #mywork {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #efefef; }
+  #mywork .light-on-bulb,
+  #mywork .light-off-bulb {
+    position: absolute;
+    top: 0;
+    right: 100px; }
+  #mywork .light-off-overlay {
+    position: absolute;
+    background: #000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: all 1s; }
   #mywork .project-thumb {
     height: 150px;
     overflow: hidden;
@@ -76,13 +92,18 @@ body {
       background-color: #F5F5F5; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar {
       width: 2px;
-      background-color: #18ffff; }
+      background-color: #00acc1; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-thumb {
-      background-color: #18ffff; }
+      background-color: #00acc1; }
   .project-modal .modal .modal-content .modal-footer {
     padding: 0;
     border: 0;
     margin: 0; }
+    .project-modal .modal .modal-content .modal-footer .mod-foot-elem a {
+      text-decoration: none;
+      color: #333; }
+    .project-modal .modal .modal-content .modal-footer .mod-foot-elem:hover {
+      background: #00acc1; }
 
 .modal-backdrop {
   background-color: transparent; }
