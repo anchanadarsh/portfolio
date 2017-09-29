@@ -1,22 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/freaking-custom.css" type="text/css">
-    <link rel="stylesheet" href="css/adarsh.css" type="text/css">
+    <title>Adarsh Anchan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <?php include '_partial/head.php' ?>
 </head>
 
 <body ng-app="portfolio" ng-controller="portfolioCtrl">
+    <header>
+        <?php include '_partial/header.php' ?>
+    </header>
+    <div class="clearfix"></div>
     <div class="makeblur">
+        <section id="aboutme">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 sec-title="ABOUT ME">ABOUT ME</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+                        <p>Hello, World! – started from there just like any other developer and now I’m here! Adarsh Anchan, an Engineer turned Website Developer, who now turns coffee into codes.</p>
+                        <p>Here’s a simple approach I live by –
+                            <br> C(reativity) – to drive me as a developer.
+                            <br> O(riginality) – to retain uniqueness.
+                            <br> D(esigning) – to make your ideas visual.
+                            <br> I(nnovation) – to unlock new concepts.
+                            <br> N(ew trends) – to keep up in digital media.
+                            <br> G(usto) – to love what you do.</p>
+                        <p>I love coding, I really do! I have never worked a day in my life since my work is also my hobby. Speaking of which, I can translate designs into working code.</p>
+                        <p>Mastering the art of making ideas happen for various brands to dominate small screens – I try to bridge the gap between a brand and their audiences with my visually appealing and responsive websites.</p>
+                        <p>With an excellent communication and good listening skills, I am able to garner client expectations and put forth it into actions. I always keep an eye out for new, different approaches and techniques. As a developer, I am never afraid of criticism as it helps me grow and forge ahead. </p>
+                        <!--<p>Just like how programming language is not a hard nut to crack for me, neither is solving problems. I like to work with people and not for or apart from them!</p>-->
+                        <p>Being an outgoing and zealous person, I make sure to have a little dose of fun at work – because why not! And if you were to catch me on my day off, I would either be playing cricket or football!</p>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="img/1234.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="mywork">
+            <div class="light-on-bulb">
+                <img src="img/bulb-on.png" width="100px">
+            </div>
+            <div class="light-off-overlay">
+                <div class="light-off-bulb">
+                    <img src="img/bulb-off.png" width="100px">
+                </div>
+            </div>
             <div class="container">
                 <div class="section-title">
                     <div class="row">
@@ -28,9 +67,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-b-md" ng-repeat="project in projects">
                         <div class="project-thumb">
-                            <img class="img-responsive" src="img/projects/{{project}}.jpg">
+                            <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
                             <div class="project-overlay">
-                                <i class="fa fa-search-plus zoom-modal" aria-hidden="true" data-toggle="modal" data-target="#{{project}}"></i>
+                                <i class="fa fa-search-plus zoom-modal" aria-hidden="true" data-toggle="modal" data-target="#{{project.name}}"></i>
                             </div>
                         </div>
 
@@ -40,45 +79,83 @@
         </section>
     </div>
     <div class="project-modal" ng-repeat="project in projects">
-        <div id="{{project}}" class="modal fade" role="dialog">
+        <div id="{{project.name}}" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
 
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">{{project}}</h4>
+                        <h4 class="modal-title">{{project.name}}</h4>
                     </div>
                     <div class="modal-body">
-                        <img class="img-responsive" src="img/projects/{{project}}.jpg">
+                        <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
+                                    <a href="{{project.url}}" target="_blank">
+                                        <p class="m-none">Website</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
+                                    <p class="m-none">Close</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://use.fontawesome.com/e49acd8124.js"></script>
-    
-    
+    <<<<<<< HEAD <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://use.fontawesome.com/e49acd8124.js"></script>
 
-    <script>
-        angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
-            $scope.projects = ['supreme', 'labs', 'peacecafee', 'aqsa', 'beyondgreen']
+        <div class="clearfix"></div>
+        <footer>
+            <?php include '_partial/footer.php' ?>
+        </footer>
+        <?php include '_partial/footer-scripts.php' ?>
 
-        });
-    </script>
-    <script>
-        $(".zoom-modal").click(function () {
-            $(".makeblur").css("filter", "blur(25px)");
-        });
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <script>
+            angular.module("portfolio", []).controller("portfolioCtrl", function($scope) {
+                $scope.projects = [{
+                    name: 'supreme',
+                    url: 'http://supremegroupindia.com/'
+                }, {
+                    name: 'labs',
+                    url: 'https://lazyassbikers.com/'
+                }, {
+                    name: 'peacecafee',
+                    url: 'http://peacecafee.com/'
+                }, {
+                    name: 'aqsa',
+                    url: 'http://www.aqsacomp.com/'
+                }, {
+                    name: 'beyondgreen',
+                    url: 'http://beyondgreen.in/'
+                }]
+
+            });
+
+        </script>
+        <script>
+            $(document).ready(function() {
+                $(".zoom-modal").click(function() {
+                    $(".makeblur").css("filter", "blur(25px)");
+                });
+                $(".project-modal .modal").click(function() {
+                    $(".makeblur").css("filter", "blur(0px)");
+                });
+            });
+
+        </script>
 
 
 </body>
