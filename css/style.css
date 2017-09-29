@@ -1,0 +1,111 @@
+body {
+  font-family: 'Muli', sans-serif; }
+
+.section-title {
+  margin: 40px 0px; }
+  .section-title h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4em;
+    text-align: center; }
+    .section-title h2:after {
+      content: attr(sec-title);
+      font-size: 1.3em;
+      color: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+
+#aboutme {
+  min-height: 100vh;
+  width: 100%;
+  background: white; }
+  #aboutme .about-img img {
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 5px rgba(51, 51, 51, 0.2); }
+
+#mywork {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #efefef; }
+  #mywork .light-on-bulb,
+  #mywork .light-off-bulb {
+    position: absolute;
+    top: 0;
+    right: 100px; }
+  #mywork .light-off-overlay {
+    position: absolute;
+    background: #000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: all 1s; }
+  #mywork .project-thumb {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.6);
+    transition: all 0.3s; }
+    #mywork .project-thumb img {
+      transition: all 0.3s ease-in; }
+    #mywork .project-thumb .project-overlay {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease; }
+      #mywork .project-thumb .project-overlay i {
+        color: white;
+        margin-top: -15px;
+        opacity: 0;
+        font-size: 2.5em;
+        transition: all 0.5s; }
+    #mywork .project-thumb:hover {
+      box-shadow: 3px 18px 20px -10px rgba(51, 51, 51, 0.5); }
+    #mywork .project-thumb:hover .project-overlay {
+      opacity: 1; }
+    #mywork .project-thumb:hover i {
+      margin-top: 58px;
+      opacity: 1; }
+
+.project-modal .modal .modal-content {
+  border: none;
+  overflow: hidden; }
+  .project-modal .modal .modal-content .modal-body {
+    height: calc(100vh - 183px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar {
+      width: 2px;
+      background-color: #00acc1; }
+    .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-thumb {
+      background-color: #00acc1; }
+  .project-modal .modal .modal-content .modal-footer {
+    padding: 0;
+    border: 0;
+    margin: 0; }
+    .project-modal .modal .modal-content .modal-footer .mod-foot-elem a {
+      text-decoration: none;
+      color: #333; }
+    .project-modal .modal .modal-content .modal-footer .mod-foot-elem:hover {
+      background: #00acc1; }
+
+.modal-backdrop {
+  background-color: transparent; }
+
+/*# sourceMappingURL=style.css.map */
