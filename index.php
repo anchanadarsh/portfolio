@@ -110,52 +110,51 @@
             </div>
         </div>
     </div>
-    <<<<<<< HEAD <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="https://use.fontawesome.com/e49acd8124.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://use.fontawesome.com/e49acd8124.js"></script>
 
-        <div class="clearfix"></div>
-        <footer>
-            <?php include '_partial/footer.php' ?>
-        </footer>
-        <?php include '_partial/footer-scripts.php' ?>
+    <div class="clearfix"></div>
+    <footer>
+        <?php include '_partial/footer.php' ?>
+    </footer>
+    <?php include '_partial/footer-scripts.php' ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-        <script>
-            angular.module("portfolio", []).controller("portfolioCtrl", function($scope) {
-                $scope.projects = [{
-                    name: 'supreme',
-                    url: 'http://supremegroupindia.com/'
-                }, {
-                    name: 'labs',
-                    url: 'https://lazyassbikers.com/'
-                }, {
-                    name: 'peacecafee',
-                    url: 'http://peacecafee.com/'
-                }, {
-                    name: 'aqsa',
-                    url: 'http://www.aqsacomp.com/'
-                }, {
-                    name: 'beyondgreen',
-                    url: 'http://beyondgreen.in/'
-                }]
+    <script>
+        angular.module("portfolio", []).controller("portfolioCtrl", function($scope) {
+            $scope.projects = [{
+                name: 'supreme',
+                url: 'http://supremegroupindia.com/'
+            }, {
+                name: 'labs',
+                url: 'https://lazyassbikers.com/'
+            }, {
+                name: 'peacecafee',
+                url: 'http://peacecafee.com/'
+            }, {
+                name: 'aqsa',
+                url: 'http://www.aqsacomp.com/'
+            }, {
+                name: 'beyondgreen',
+                url: 'http://beyondgreen.in/'
+            }]
 
+        });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".zoom-modal").click(function() {
+                $(".makeblur").css("filter", "blur(25px)");
             });
-
-        </script>
-        <script>
-            $(document).ready(function() {
-                $(".zoom-modal").click(function() {
-                    $(".makeblur").css("filter", "blur(25px)");
-                });
-                $(".project-modal .modal").click(function() {
-                    $(".makeblur").css("filter", "blur(0px)");
-                });
+            $(".project-modal .modal").click(function() {
+                $(".makeblur").css("filter", "blur(0px)");
             });
+        });
 
-        </script>
+    </script>
 
 
 </body>
