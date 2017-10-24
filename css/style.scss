@@ -46,6 +46,13 @@ body {
         position: absolute;
         top: 0;
         right: 100px;
+        .bulb-off-overlay {
+            width: 100%;
+            height: 100px;
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+        }
     }
     .light-off-overlay {
         position: absolute;

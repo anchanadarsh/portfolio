@@ -53,6 +53,7 @@
             </div>
             <div class="light-off-overlay">
                 <div class="light-off-bulb">
+                    <div class="bulb-off-overlay"></div>
                     <img src="img/bulb-off.png" width="100px">
                 </div>
             </div>
