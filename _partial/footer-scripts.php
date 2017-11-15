@@ -4,11 +4,13 @@
 <!--Taken from Bootstrap CDN-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- Offline 
+<!--
+ Offline 
 Downloaded from jquery 
+-->
 <script src="js/jquery-1.12.4.min.js"></script>
-Downloaded from get bootstrap
-<script src="js/bootstrap.min.js"></script> -->
+<!--Downloaded from get bootstrap-->
+<script src="js/bootstrap.min.js"></script> 
 
 <!--Your custom script code-->
 <script src="js/main.js"></script>
