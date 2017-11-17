@@ -16,8 +16,8 @@
     <div class="clearfix"></div>
     <div class="makeblur">
         <section id="banner">
-            <div class="banner-inner">
-                <h1><span>H</span><span>i</span><span>,</span><span>I</span><span>'</span><span>m</span> <span>A</span><span>d</span><span>a</span><span>r</span><span>s</span><span>h</span><span> A</span><span>n</span><span>c</span><span>h</span><span>a</span><span>n</span><span>,</span><span><br>W</span><span>e</span><span>b</span><span> </span><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span><span>.</span></h1>
+            <div class="banner-inner ">
+                <h1 class=""><span class="">H</span><span>i</span><span>,</span><span>I</span><span>'</span><span>m</span> <span>A</span><span>d</span><span>a</span><span>r</span><span>s</span><span>h</span><span> A</span><span>n</span><span>c</span><span>h</span><span>a</span><span>n</span><span>,</span><span><br>W</span><span>e</span><span>b</span><span> </span><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span><span>.</span></h1>
             </div>
         </section>
         <section id="aboutme">

@@ -10,7 +10,12 @@ Downloaded from jquery
 -->
 <script src="js/jquery-1.12.4.min.js"></script>
 <!--Downloaded from get bootstrap-->
-<script src="js/bootstrap.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 <!--Your custom script code-->
 <script src="js/main.js"></script>
