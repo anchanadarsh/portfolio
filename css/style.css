@@ -1,11 +1,61 @@
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  border: 4px solid rgba(255, 255, 255, 0);
+  background-clip: content-box;
+  background-color: black;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+  cursor: grab; }
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.relative-box, #aboutme {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  float: left; }
+  .relative-box:after, #aboutme:after {
+    content: '';
+    clear: both; }
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.oz-0 {
+  opacity: 0 !important;
+  z-index: 0 !important; }
+
+.full-overlay, #mywork .light-off-overlay, #mywork .switch-on-off-button .switch-on-shadow, #mywork .project-thumb .project-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
 body {
-  font-family: 'Muli', sans-serif;
-  font-size: 16px; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-right: 0px !important; }
 
 .section-title {
   margin: 40px 0px; }
   .section-title h2 {
     margin: 0;
+    font-family: "Spectral SC", serif;
     font-weight: 700;
     font-size: 4em;
     text-align: center; }
@@ -28,12 +78,13 @@ body {
     vertical-align: middle;
     text-align: center; }
     #banner .banner-inner h1 {
+      cursor: pointer;
       margin: 0;
       font-weight: 600;
       font-size: 4em; }
       #banner .banner-inner h1 span {
-        color: white;
-        transition: all 0.5s; }
+        display: inline-block;
+        color: #ed015c; }
         #banner .banner-inner h1 span:hover {
           color: #18ffff; }
 
@@ -49,7 +100,7 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: #efefef; }
+  background: #666; }
   #mywork .light-on-bulb,
   #mywork .light-off-bulb {
     position: absolute;
@@ -63,15 +114,32 @@ body {
       position: absolute;
       top: 0; }
   #mywork .light-off-overlay {
-    position: absolute;
     background: #000000;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
     z-index: 1;
     opacity: 1;
     transition: all 1s; }
+  #mywork .switch-color, #mywork .switch-on-off-button {
+    position: absolute;
+    top: 30px;
+    right: 250px;
+    text-align: center;
+    width: 100px;
+    padding: 5px 10px;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer; }
+  #mywork .switch-on-off-button {
+    background: #5bf15b; }
+    #mywork .switch-on-off-button p {
+      margin: 0; }
+    #mywork .switch-on-off-button .switch-on-shadow {
+      top: 7px;
+      background: #5bf15b;
+      opacity: 0.8;
+      z-index: -1;
+      border-radius: 10px; }
+  #mywork .switch-color-red {
+    background: #ea5f46 !important; }
   #mywork .project-thumb {
     height: 150px;
     overflow: hidden;
@@ -84,11 +152,6 @@ body {
       transition: all 0.3s ease-in; }
     #mywork .project-thumb .project-overlay {
       opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
       text-align: center;
       background: rgba(0, 0, 0, 0.8);
       transition: all 0.3s ease; }
@@ -109,6 +172,8 @@ body {
 .project-modal .modal .modal-content {
   border: none;
   overflow: hidden; }
+  .project-modal .modal .modal-content .modal-title {
+    font-weight: bold; }
   .project-modal .modal .modal-content .modal-body {
     height: calc(100vh - 183px);
     overflow-y: scroll;
@@ -119,9 +184,9 @@ body {
       background-color: #F5F5F5; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar {
       width: 2px;
-      background-color: #00acc1; }
+      background-color: #ed015c; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-thumb {
-      background-color: #00acc1; }
+      background-color: #ed015c; }
   .project-modal .modal .modal-content .modal-footer {
     padding: 0;
     border: 0;
@@ -130,7 +195,7 @@ body {
       text-decoration: none;
       color: #333; }
     .project-modal .modal .modal-content .modal-footer .mod-foot-elem:hover {
-      background: #00acc1; }
+      background: #ed015c; }
 
 .modal-backdrop {
   background-color: transparent; }

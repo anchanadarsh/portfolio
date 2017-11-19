@@ -5,6 +5,9 @@
 
 <!--Connect fonts-->
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 <!-- Online -->
 <!--Taken from bootstrap cdn-->
@@ -12,16 +15,13 @@
 <!--Taken from bootstrap cdn-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
-
 <!--
  Offline 
 Downloaded from font awesome
 -->
-<link href="css/font-awesome.min.css" rel="stylesheet"/>
+<link href="css/font-awesome.min.css" rel="stylesheet" />
 <!--Downloaded from get bootstrap-->
-<link href="css/bootstrap.min.css" rel="stylesheet">  
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!--Created from custom codes-->
 <link href="css/freaking-custom.css" rel="stylesheet">
