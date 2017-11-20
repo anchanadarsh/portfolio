@@ -22,9 +22,11 @@
         </section>
         <div class="clearfix"></div>
         <section id="aboutme">
+<!--
             <div class="full-overlay">
                 <img src="img/aboutbg2.jpeg" class="img-responsive">
             </div>
+-->
             <div class="container">
                 <div class="section-title">
                     <div class="row">
@@ -58,7 +60,7 @@
         <div class="clearfix"></div>
         <section id="mywork">
             <div class="full-overlay">
-<!--                <img src="img/project-bg.jpg" class="img-responsive">-->
+                <!--                <img src="img/project-bg.jpg" class="img-responsive">-->
             </div>
             <div class="switch-on-off-button">
                 <p>Switch on</p>
@@ -135,35 +137,39 @@
     </footer>
     <?php include '_partial/footer-scripts.php' ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-        <script>
-            angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
-                $scope.projects = [{
-                    name: 'starbulls',
-                    url: 'http://starbulls.kreativesanity.com/'
+    <script>
+        angular.module("portfolio", []).controller("portfolioCtrl", function($scope) {
+            $scope.projects = [{
+                name: 'jdeyes',
+                url: 'http://demo.quanical.com/jdeyes/'
             }, {
-                    name: 'peacecafee',
-                    url: 'http://peacecafee.com/'
+                name: 'starbulls',
+                url: 'http://starbulls.kreativesanity.com/'
             }, {
-                    name: 'supreme',
-                    url: 'http://supremegroupindia.com/'
+                name: 'peacecafee',
+                url: 'http://peacecafee.com/'
             }, {
-                    name: 'labs',
-                    url: 'https://lazyassbikers.com/'
+                name: 'supreme',
+                url: 'http://supremegroupindia.com/'
             }, {
-                    name: 'fametraining',
-                    url: 'http://www.fametraining.ae/'
+                name: 'labs',
+                url: 'https://lazyassbikers.com/'
             }, {
-                    name: 'aqsa',
-                    url: 'http://www.aqsacomp.com/'
+                name: 'fametraining',
+                url: 'http://www.fametraining.ae/'
             }, {
-                    name: 'beyondgreen',
-                    url: 'http://beyondgreen.in/'
+                name: 'aqsa',
+                url: 'http://www.aqsacomp.com/'
+            }, {
+                name: 'beyondgreen',
+                url: 'http://beyondgreen.in/'
             }]
 
-            });
-        </script>
+        });
+
+    </script>
 
 
 </body>

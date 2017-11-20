@@ -4,8 +4,10 @@ $secondary-color:#18ffff;
 $tertiary-color:#00acc1;
 $switch-green:#5bf15b;
 $switch-red:#ea5f46;
-$font-primary: 'Spectral SC', serif;
-$font-secondary: 'Open Sans', sans-serif;
+$font-primary: 'Spectral SC',
+serif;
+$font-secondary: 'Open Sans',
+sans-serif;
 body {
     font-family: $font-secondary;
     font-size: 16px;
@@ -60,10 +62,12 @@ body {
 }
 
 #aboutme {
+    background: url(../img/aboutbg2.jpeg);
+    background-size: cover;
     @extend .relative-box;
     min-height: 100vh;
     width: 100%;
-    background: white;
+    //    background: white;
     .about-img {
         img {
             border-radius: 5px;
@@ -169,7 +173,7 @@ body {
         .modal-content {
             border: none;
             overflow: hidden;
-            .modal-title{
+            .modal-title {
                 font-weight: bold;
             }
             .modal-body {
