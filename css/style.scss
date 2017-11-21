@@ -23,7 +23,9 @@ body {
         font-weight: 700;
         font-size: 4em;
         text-align: center;
+//        text-transform:uppercase;
         &:after {
+//            text-transform:uppercase;
             content: attr(sec-title);
             font-size: 1.3em;
             color: rgba(0, 0, 0, 0.05);

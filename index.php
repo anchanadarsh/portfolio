@@ -22,7 +22,7 @@
         </section>
         <div class="clearfix"></div>
         <section id="aboutme">
-<!--
+            <!--
             <div class="full-overlay">
                 <img src="img/aboutbg2.jpeg" class="img-responsive">
             </div>
@@ -97,6 +97,25 @@
             </div>
         </section>
         <div class="clearfix"></div>
+        <section id="myskills">
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 sec-title="My Skills">My Skills</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-2 m-b-md" ng-repeat="skill in skills">
+                        <div class="skill-box text-center">
+                            <img src="img/skills/{{skill.name}}.png" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
     </div>
     <div class="project-modal" ng-repeat="project in projects">
         <div id="{{project.name}}" class="modal fade" role="dialog">
@@ -138,38 +157,7 @@
     <?php include '_partial/footer-scripts.php' ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-    <script>
-        angular.module("portfolio", []).controller("portfolioCtrl", function($scope) {
-            $scope.projects = [{
-                name: 'jdeyes',
-                url: 'http://demo.quanical.com/jdeyes/'
-            }, {
-                name: 'starbulls',
-                url: 'http://starbulls.kreativesanity.com/'
-            }, {
-                name: 'peacecafee',
-                url: 'http://peacecafee.com/'
-            }, {
-                name: 'supreme',
-                url: 'http://supremegroupindia.com/'
-            }, {
-                name: 'labs',
-                url: 'https://lazyassbikers.com/'
-            }, {
-                name: 'fametraining',
-                url: 'http://www.fametraining.ae/'
-            }, {
-                name: 'aqsa',
-                url: 'http://www.aqsacomp.com/'
-            }, {
-                name: 'beyondgreen',
-                url: 'http://beyondgreen.in/'
-            }]
-
-        });
-
-    </script>
+    <script src="js/angularscript.js"></script>
 
 
 </body>
