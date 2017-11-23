@@ -1,3 +1,6 @@
+.color-white {
+  color: white !important; }
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 12px;
@@ -21,18 +24,41 @@
 ::-webkit-scrollbar-corner {
   background-color: rgba(255, 255, 255, 0.2); }
 
-.relative-box, #aboutme {
+.bnw {
+  filter: grayscale(1); }
+
+.relative-box, .section-title h2, #aboutme, #myskills {
   position: relative;
   min-height: 1px;
   width: 100%;
   float: left; }
-  .relative-box:after, #aboutme:after {
+  .relative-box:after, .section-title h2:after, #aboutme:after, #myskills:after {
     content: '';
     clear: both; }
 
 section {
+  min-height: 100vh !important;
   padding-top: 50px;
   padding-bottom: 50px; }
+
+.section-title {
+  margin: 40px 0px; }
+  .section-title h2 {
+    margin: 0;
+    font-family: "Spectral SC", serif;
+    font-weight: 700;
+    font-size: 4em;
+    text-align: center;
+    z-index: 1; }
+    .section-title h2:after {
+      content: attr(sec-title);
+      font-size: 1.3em;
+      color: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1; }
 
 .oz-0 {
   opacity: 0 !important;
@@ -50,23 +76,6 @@ body {
   font-size: 16px;
   line-height: 1.6;
   padding-right: 0px !important; }
-
-.section-title {
-  margin: 40px 0px; }
-  .section-title h2 {
-    margin: 0;
-    font-family: "Spectral SC", serif;
-    font-weight: 700;
-    font-size: 4em;
-    text-align: center; }
-    .section-title h2:after {
-      content: attr(sec-title);
-      font-size: 1.3em;
-      color: rgba(0, 0, 0, 0.05);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%; }
 
 #banner {
   background: #222;
@@ -171,14 +180,15 @@ body {
       opacity: 1; }
 
 #myskills {
-  background: #18ffff;
+  background: url(../img/blackbg.gif) repeat;
   transition: all 0.5s linear; }
+  #myskills .skill-overlay-bg {
+    transition: all 0.5s linear; }
   #myskills .skill-box img {
-    filter: grayscale(1);
     transition: all 0.7s linear; }
-  #myskills .skill-box:hover img {
+  #myskills .skill-box .invert-transform {
     transform: rotateY(360deg) scale(1.5);
-    filter: grayscale(0); }
+    filter: invert(100%); }
 
 .project-modal .modal .modal-content {
   border: none;

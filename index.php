@@ -58,6 +58,26 @@
             </div>
         </section>
         <div class="clearfix"></div>
+        <section id="myskills">
+            <div class="full-overlay skill-overlay-bg" style="opacity:0.5"></div>
+            <div class="container">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 class="color-white" sec-title="My Skills">My Skills</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-2 m-b-xxl" ng-repeat="skill in skills">
+                        <div class="skill-box text-center">
+                            <img src="img/skills/{{skill.name}}.png" class="img-responsive" setcolor="{{skill.color}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
         <section id="mywork">
             <div class="full-overlay">
                 <!--                <img src="img/project-bg.jpg" class="img-responsive">-->
@@ -78,7 +98,7 @@
             <div class="container">
                 <div class="section-title">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <h2 sec-title="MY PROJECTS">MY PROJECTS</h2>
                         </div>
                     </div>
@@ -92,25 +112,6 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="clearfix"></div>
-        <section id="myskills">
-            <div class="container">
-                <div class="section-title">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2 sec-title="My Skills">My Skills</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-2 m-b-md" ng-repeat="skill in skills">
-                        <div class="skill-box text-center">
-                            <img src="img/skills/{{skill.name}}.png" class="img-responsive" setcolor="{{skill.color}}">
-                        </div>
                     </div>
                 </div>
             </div>

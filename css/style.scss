@@ -1,40 +1,9 @@
 @import '_global';
-$primary-color:#ed015c;
-$secondary-color:#18ffff;
-$tertiary-color:#00acc1;
-$switch-green:#5bf15b;
-$switch-red:#ea5f46;
-$font-primary: 'Spectral SC',
-serif;
-$font-secondary: 'Open Sans',
-sans-serif;
 body {
     font-family: $font-secondary;
     font-size: 16px;
     line-height: 1.6;
     padding-right: 0px!important;
-}
-
-.section-title {
-    margin: 40px 0px;
-    h2 {
-        margin: 0;
-        font-family: $font-primary;
-        font-weight: 700;
-        font-size: 4em;
-        text-align: center;
-        //        text-transform:uppercase;
-        &:after {
-            //            text-transform:uppercase;
-            content: attr(sec-title);
-            font-size: 1.3em;
-            color: rgba(0, 0, 0, 0.05);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-    }
 }
 
 #banner {
@@ -171,18 +140,19 @@ body {
 }
 
 #myskills {
-    background: $secondary-color;
+    @extend .relative-box;
+    background: url(../img/blackbg.gif)repeat;
     transition: all 0.5s linear;
+    .skill-overlay-bg {
+        transition: all 0.5s linear;
+    }
     .skill-box {
         img {
-            filter: grayscale(1);
             transition: all 0.7s linear;
         }
-        &:hover {
-            img {
-                transform: rotateY(360deg) scale(1.5);
-                filter: grayscale(0);
-            }
+        .invert-transform {
+            transform: rotateY(360deg) scale(1.5);
+            filter: invert(100%);
         }
     }
 }

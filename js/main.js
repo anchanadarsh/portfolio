@@ -34,11 +34,16 @@ $(document).ready(function () {
 
 
     //skill-hover-effect
-    $(".skill-box img").mouseover(function () {
-//        alert("hello");
+    $("#myskills").on("mouseover", "img", function () {
         var getcolor = $(this).attr("setcolor");
-//        alert(getcolor);
-        $("#myskills").css("background", getcolor);
+        $(".skill-box img").addClass("bnw");
+        $(this).addClass("invert-transform");
+        $(".skill-overlay-bg").css("background", getcolor);
+    });
+    $("#myskills").on("mouseout", "img", function () {
+        $(".skill-box img").removeClass("bnw");
+        $(this).removeClass("invert-transform");
+        $(".skill-overlay-bg").css("background", "transparent");
     });
 
 });

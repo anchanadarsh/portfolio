@@ -57,7 +57,7 @@ angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
         }, {
             name: 'less',
             rating: 2.5,
-            color: '#1e416f'
+            color: '#557aaa'
         }, {
             name: 'material',
             rating: 3,
@@ -65,7 +65,7 @@ angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
         }, {
             name: 'wordpress',
             rating: 3,
-            color: '#464442'
+            color: '#396efd'
         }, {
             name: 'photoshop',
             rating: 3.5,
