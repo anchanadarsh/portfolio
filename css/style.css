@@ -171,6 +171,7 @@ body {
       opacity: 1; }
 
 #myskills {
+  background: #18ffff;
   transition: all 0.5s linear; }
   #myskills .skill-box img {
     filter: grayscale(1);

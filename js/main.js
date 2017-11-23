@@ -34,10 +34,10 @@ $(document).ready(function () {
 
 
     //skill-hover-effect
-    $(".skill-box").on("click", function () {
-        alert("hello");
+    $(".skill-box img").mouseover(function () {
+//        alert("hello");
         var getcolor = $(this).attr("setcolor");
-        alert(getcolor);
+//        alert(getcolor);
         $("#myskills").css("background", getcolor);
     });
 
