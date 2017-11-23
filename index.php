@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 col-md-2 m-b-md" ng-repeat="skill in skills">
                         <div class="skill-box text-center">
-                            <img src="img/skills/{{skill.name}}.png" class="img-responsive">
+                            <img src="img/skills/{{skill.name}}.png" class="img-responsive" setcolor="{{skill.color}}">
                         </div>
                     </div>
                 </div>

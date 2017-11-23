@@ -23,9 +23,9 @@ body {
         font-weight: 700;
         font-size: 4em;
         text-align: center;
-//        text-transform:uppercase;
+        //        text-transform:uppercase;
         &:after {
-//            text-transform:uppercase;
+            //            text-transform:uppercase;
             content: attr(sec-title);
             font-size: 1.3em;
             color: rgba(0, 0, 0, 0.05);
@@ -166,6 +166,22 @@ body {
         &:hover i {
             margin-top: 58px;
             opacity: 1;
+        }
+    }
+}
+
+#myskills {
+    transition: all 0.5s linear;
+    .skill-box {
+        img {
+            filter: grayscale(1);
+            transition: all 0.7s linear;
+        }
+        &:hover {
+            img {
+                transform: rotateY(360deg) scale(1.5);
+                filter: grayscale(0);
+            }
         }
     }
 }

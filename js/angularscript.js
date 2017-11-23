@@ -25,41 +25,61 @@ angular.module("portfolio", []).controller("portfolioCtrl", function ($scope) {
         url: 'http://beyondgreen.in/'
             }]
 
-    $scope.skills = [{
-        name: 'html',
-        rating: 4
+    $scope.skills = [
+        {
+            name: 'html',
+            rating: 4,
+            color: '#000'
         }, {
-        name: 'css',
-        rating: 4
+            name: 'css',
+            rating: 4,
+            color: '#111'
         }, {
-        name: 'jQuery',
-        rating: 3
+            name: 'jQuery',
+            rating: 3,
+            color: '#222'
         }, {
-        name: 'javascript',
-        rating: 2.5
+            name: 'javascript',
+            rating: 2.5,
+            color: '#333'
         }, {
-        name: 'angular',
-        rating: 2
+            name: 'angular',
+            rating: 2,
+            color: '#444'
         }, {
-        name: 'bootstrap',
-        rating: 4
+            name: 'bootstrap',
+            rating: 4,
+            color: '#555'
         }, {
-        name: 'sass',
-        rating: 3
+            name: 'sass',
+            rating: 3,
+            color: '#333'
         }, {
-        name: 'less',
-        rating: 2.5
+            name: 'less',
+            rating: 2.5,
+            color: '#333'
         }, {
-        name: 'material',
-        rating: 3
+            name: 'material',
+            rating: 3,
+            color: '#333'
         }, {
-        name: 'wordpress',
-        rating: 3
+            name: 'wordpress',
+            rating: 3,
+            color: '#333'
         }, {
-        name: 'photoshop',
-        rating: 3.5
+            name: 'photoshop',
+            rating: 3.5,
+            color: '#333'
         }, {
-        name: 'php',
-        rating: 2
+            name: 'php',
+            rating: 2,
+            color: '#333'
     }]
+
+//    $scope.setbgColor = function (e) {
+//        alert("hello");
+//        var getcolor = e.getAttribute("setcolor");
+//        alert(getcolor);
+////        $("#myskills").css("background", "red");
+//    }
 });
