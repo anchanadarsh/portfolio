@@ -9,10 +9,10 @@ $(document).ready(function () {
     });
 
     //modal bg blur effect
-    $(".zoom-modal").click(function () {
+    $("#mywork").on("click", ".zoom-modal", function () {
         $(".makeblur").css("filter", "blur(25px)");
     });
-    $(".project-modal .modal").click(function () {
+    $(".project-modal-outer").on("click", ".mod-close", function () {
         $(".makeblur").css("filter", "blur(0px)");
     });
 
@@ -34,15 +34,15 @@ $(document).ready(function () {
 
 
     //skill-hover-effect
-    $("#myskills").on("mouseover", "img", function () {
-        var getcolor = $(this).attr("setcolor");
+    $("#myskills").on("mouseover", ".skill-box-out", function () {
+        var getcolor = $(this).find("img").attr("setcolor");
         $(".skill-box img").addClass("bnw");
-        $(this).addClass("invert-transform");
+        $(this).find("img").addClass("invert-transform");
         $(".skill-overlay-bg").css("background", getcolor);
     });
-    $("#myskills").on("mouseout", "img", function () {
+    $("#myskills").on("mouseout", ".skill-box-out", function () {
         $(".skill-box img").removeClass("bnw");
-        $(this).removeClass("invert-transform");
+        $(this).find("img").removeClass("invert-transform");
         $(".skill-overlay-bg").css("background", "transparent");
     });
 

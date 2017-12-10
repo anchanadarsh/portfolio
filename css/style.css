@@ -110,7 +110,8 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: #666; }
+  background: url(../img/projectbg.jpeg);
+  background-size: cover; }
   #mywork .light-on-bulb,
   #mywork .light-off-bulb {
     position: absolute;
@@ -151,11 +152,12 @@ body {
   #mywork .switch-color-red {
     background: #ea5f46 !important; }
   #mywork .project-thumb {
-    height: 150px;
+    height: 180px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
     border-radius: 5px;
+    border: 10px solid black;
     box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.6);
     transition: all 0.3s; }
     #mywork .project-thumb img {
@@ -184,11 +186,13 @@ body {
   transition: all 0.5s linear; }
   #myskills .skill-overlay-bg {
     transition: all 0.5s linear; }
-  #myskills .skill-box img {
-    transition: all 0.7s linear; }
-  #myskills .skill-box .invert-transform {
-    transform: rotateY(360deg) scale(1.5);
-    filter: invert(100%); }
+  #myskills .skill-box-out {
+    cursor: pointer; }
+    #myskills .skill-box-out .skill-box img {
+      transition: all 0.7s linear; }
+    #myskills .skill-box-out .skill-box .invert-transform {
+      transform: rotateY(360deg) scale(1.5);
+      filter: invert(100%); }
 
 .project-modal .modal .modal-content {
   border: none;

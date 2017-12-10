@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-2 m-b-xxl" ng-repeat="skill in skills">
+                    <div class="col-xs-12 col-sm-3 col-md-2 m-b-xxl skill-box-out" ng-repeat="skill in skills">
                         <div class="skill-box text-center">
                             <img src="img/skills/{{skill.name}}.png" class="img-responsive" setcolor="{{skill.color}}">
                         </div>
@@ -79,9 +79,7 @@
         </section>
         <div class="clearfix"></div>
         <section id="mywork">
-            <div class="full-overlay">
-                <!--                <img src="img/project-bg.jpg" class="img-responsive">-->
-            </div>
+            <div class="full-overlay" style="background: rgba(255, 255, 255, 0.5);"></div>
             <div class="switch-on-off-button">
                 <p>Switch on</p>
                 <div class="switch-on-shadow"></div>
@@ -118,47 +116,48 @@
         </section>
         <div class="clearfix"></div>
     </div>
-    <div class="project-modal" ng-repeat="project in projects">
-        <div id="{{project.name}}" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg">
+    <div class="project-modal-outer">
+        <div class="project-modal" ng-repeat="project in projects">
+            <div id="{{project.name}}" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">{{project.name | uppercase}}</h4>
-                    </div>
-                    <div class="modal-body">
-                        <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
-                    </div>
-                    <div class="modal-footer">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
-                                    <a href="{{project.url}}" target="_blank">
-                                        <p class="m-none">Website</p>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" data-dismiss="modal">
-                                    <p class="m-none">Close</p>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="mod-close close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{project.name | uppercase}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img class="img-responsive" src="img/projects/{{project.name}}.jpg">
+                        </div>
+                        <div class="modal-footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem" style="border-right:1px solid #ddd">
+                                        <a href="{{project.url}}" target="_blank">
+                                            <p class="m-none">Website</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 text-center p-md mod-foot-elem mod-close" data-dismiss="modal">
+                                        <p class="m-none">Close</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
-
     <div class="clearfix"></div>
     <footer>
         <?php include '_partial/footer.php' ?>
     </footer>
     <?php include '_partial/footer-scripts.php' ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="js/angularscript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="js/angularscript.js"></script>
 
 </body>
 
