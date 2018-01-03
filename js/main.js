@@ -36,8 +36,8 @@ $(document).ready(function () {
     //skill-hover-effect
     $("#myskills").on("mouseover", ".skill-box-out", function () {
         var getcolor = $(this).find("img").attr("setcolor");
-        $(".skill-box img").addClass("bnw");
-        $(this).find("img").addClass("invert-transform");
+//        $(".skill-box img").addClass("bnw");
+//        $(this).find("img").addClass("invert-transform");
         $(".skill-overlay-bg").css("background", getcolor);
     });
     $("#myskills").on("mouseout", ".skill-box-out", function () {

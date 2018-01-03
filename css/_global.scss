@@ -1,14 +1,16 @@
-$primary-color:#ed015c;
-$secondary-color:#18ffff;
+//$primary-color:#ed015c;
+$primary-color:#6200EA;
+$secondary-color:#FF1744;
+//$secondary-color:#18ffff;
 $tertiary-color:#00acc1;
 $switch-green:#5bf15b;
 $switch-red:#ea5f46;
 $color-white:#ffffff;
-$font-primary: 'Spectral SC',
-serif;
+$font-primary: 'Montserrat',
+sans-serif;
 $font-secondary: 'Open Sans',
 sans-serif;
-.color-white{
+.color-white {
     color: white!important;
 }
 
@@ -39,7 +41,7 @@ sans-serif;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.bnw{
+.bnw {
     filter: grayscale(1);
 }
 
@@ -68,12 +70,13 @@ section {
         font-family: $font-primary;
         font-weight: 700;
         font-size: 4em;
-        text-align: center;
+        text-align: left;
+        text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
         z-index: 1;
-        //        text-transform:uppercase;
+        text-transform: uppercase;
         &:after {
             //            text-transform:uppercase;
-            content: attr(sec-title);
+            //            content: attr(sec-title);
             font-size: 1.3em;
             color: rgba(0, 0, 0, 0.05);
             position: absolute;

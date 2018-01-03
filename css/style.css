@@ -45,13 +45,14 @@ section {
   margin: 40px 0px; }
   .section-title h2 {
     margin: 0;
-    font-family: "Spectral SC", serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 4em;
-    text-align: center;
-    z-index: 1; }
+    text-align: left;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-transform: uppercase; }
     .section-title h2:after {
-      content: attr(sec-title);
       font-size: 1.3em;
       color: rgba(0, 0, 0, 0.05);
       position: absolute;
@@ -78,7 +79,7 @@ body {
   padding-right: 0px !important; }
 
 #banner {
-  background: #222;
+  background: #fff;
   height: 100vh;
   width: 100%;
   display: table; }
@@ -90,12 +91,13 @@ body {
       cursor: pointer;
       margin: 0;
       font-weight: 600;
-      font-size: 4em; }
+      font-size: 5em; }
       #banner .banner-inner h1 span {
         display: inline-block;
-        color: #ed015c; }
+        color: #6200EA;
+        text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5); }
         #banner .banner-inner h1 span:hover {
-          color: #18ffff; }
+          color: #FF1744; }
 
 #aboutme {
   background: url(../img/aboutbg2.jpeg);
@@ -187,12 +189,13 @@ body {
   #myskills .skill-overlay-bg {
     transition: all 0.5s linear; }
   #myskills .skill-box-out {
-    cursor: pointer; }
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px; }
     #myskills .skill-box-out .skill-box img {
-      transition: all 0.7s linear; }
+      transition: all 0.5s linear; }
     #myskills .skill-box-out .skill-box .invert-transform {
-      transform: rotateY(360deg) scale(1.5);
-      filter: invert(100%); }
+      transform: translateX(-20px); }
 
 .project-modal .modal .modal-content {
   border: none;
@@ -209,9 +212,9 @@ body {
       background-color: #F5F5F5; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar {
       width: 2px;
-      background-color: #ed015c; }
+      background-color: #6200EA; }
     .project-modal .modal .modal-content .modal-body::-webkit-scrollbar-thumb {
-      background-color: #ed015c; }
+      background-color: #6200EA; }
   .project-modal .modal .modal-content .modal-footer {
     padding: 0;
     border: 0;
@@ -220,7 +223,7 @@ body {
       text-decoration: none;
       color: #333; }
     .project-modal .modal .modal-content .modal-footer .mod-foot-elem:hover {
-      background: #ed015c; }
+      background: #6200EA; }
 
 .modal-backdrop {
   background-color: transparent; }
